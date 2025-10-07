@@ -1,8 +1,11 @@
 # Workflow name displayed in GitHub Actions UI
 name: 00-debug
 
-# Trigger: runs only on pull requests
-on: [pull_request]
+on:
+  pull_request:
+  push:
+    branches:
+      - main
 
 # Cancel previous runs if a new commit is pushed to the same PR
 concurrency:
